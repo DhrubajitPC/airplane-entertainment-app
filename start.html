@@ -3,11 +3,11 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+	  	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
 	  	<link rel="stylesheet" href="css/start.css">
-	  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  		<script src="./js/jquery.min.js"></script>
+  		<script src="./js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -22,23 +22,229 @@
 					</div>
 				</div>
 			</div>
-			<img src= "assets/main_image.jpg" class="img-responsive"/>
 		</div>
-		<div class= "col-md-12 options">
-			<div class= "col-md-4 each-option">
-				<i class="fa fa-plane fa-2x">Track Your Journey</i>
-			</div>
-			<div class= "col-md-4 each-option">
-				<i class="fa fa-film fa-2x">Movies</i>
-			</div>
-			<div class= "col-md-4 each-option">
-				<i class="fa fa-music fa-2x">Music</i>
-			</div>
-			<div class= "col-md-4 each-option">
-				<i class="fa fa-gamepad fa-2x">Games</i>
-			</div>			
-			
+		
+		<div id="movies" class="col-md-12 sect" style="display:none;">
+			<div class="row"><div class="col-md-12">
+				<ul class="list-group">
+					<a href="javascript:" class="list-group-item">
+						Tic Tac Toe
+						<div class="list-group-details" style="display:none;">
+							<div class="row"><div class="col-md-12">
+								<iframe src="tictactoe.html" height="340" width="500" frameBorder="0"></iframe>
+							</div></div>
+						</div>
+					</a>
+					<a href="javascript:" class="list-group-item">
+						Sliding Puzzle
+						<div class="list-group-details" style="display:none;">
+							<div class="row"><div class="col-md-12">
+								<iframe src="sliding.html" height="450" width="650" frameBorder="0"></iframe>
+							</div></div>
+						</div>
+					</a>
+				</ul>
+			</div></div>
 		</div>
+		
+		<div id="music" class="col-md-12 sect" style="display:none;">
+			<div class="row"><div class="col-md-12">
+				<ul class="list-group">
+					<a href="javascript:" class="list-group-item">
+						<div class="row">
+							<div class="col-md-1"><img src="assets/rock_icon.png" alt="" class="img-responsive img-inline" /></div>
+							<div class="col-md-11">Rock</div>
+						</div>
+						<div class="list-group-details" style="display:none;">
+							<hr/>
+							<table style="border: none;">
+								<tr style="font-size:30px;text-align:center">
+								<td><div class="avatar"><img src="assets/linkinpark2.jpg" alt="" class="img-responsive img-circle" /></div>
+										<h5>In The End</h5>
+										<audio controls="controls" align:"center">
+										<source src="assets/audio/intheend.mp4"type="audio/mp4"/>
+										</audio></td>
+								<td> <div class="avatar"><img src="assets/linkinpark.jpg" alt="" class="img-responsive img-circle" /></div>
+										<h5>Numb</h5>
+										<audio controls preload="auto"  class="audio_play_only">
+										<source src="assets/audio/numb.mp4"type="audio/mp4"/>
+										</audio></td>
+								</tr>
+							</table>
+						</div>
+					</a>
+					<a href="javascript:" class="list-group-item">
+						<div class="row">
+							<div class="col-md-1"><img src="assets/classics_icon.png" alt="" class="img-responsive img-inline" /></div>
+							<div class="col-md-11">Pop</div>
+						</div>
+						<div class="list-group-details" style="display:none;">
+							<hr/>
+							<table style="border: none;">
+								<tr style="font-size:30px;text-align:center">
+									<td><div class="avatar"><img src="assets/onedirection2.jpg" alt="" class="img-responsive img-circle" /></div>
+											<h5>Night Changes</h5>
+											<audio controls="controls" align:"center">
+											<source src="assets/audio/nightchanges.mp4"type="audio/mp4"/>
+											</audio></td>
+									<td><div class="avatar"><img src="assets/onedirection.jpg" alt="" class="img-responsive img-circle" /></div>
+											<h5>What Makes You Beautiful</h5>
+											<audio controls preload="auto"  class="audio_play_only">
+											<source src="assets/audio/whatmakesyoubeautiful.mp4"type="audio/mp4"/>
+											</audio></td>
+								</tr>
+							</table>
+						</div>
+					</a>
+					<a href="javascript:" class="list-group-item">
+						<div class="row">
+							<div class="col-md-1"><img src="assets/jazz_icon.png" alt="" class="img-responsive img-inline" /></div>
+							<div class="col-md-11">Jazz</div>
+						</div>
+						<div class="list-group-details" style="display:none;">
+							<hr/>
+							<table style="border: none;">
+								<tr style="font-size:30px;text-align:center">
+									<td><div class="avatar"><img src="assets/hozier2.jpg" alt="" class="img-responsive img-circle" /></div>
+											<h5>Take Me To Church</h5>
+											<audio controls="controls" align:"center">
+											<source src="assets/audio/takemetochurch.mp4"type="audio/mp4"/>
+											</audio></td>
+									<td><div class="avatar"><img src="assets/hozier.jpg" alt="" class="img-responsive img-circle" /></div>
+											<h5>Work Song</h5>
+											<audio controls preload="auto"  class="audio_play_only">
+											<source src="assets/audio/worksong.mp4"type="audio/mp4"/>
+											</audio></td>
+								</tr>
+							</table>
+						</div>
+					</a>
+				</ul>
+			</div></div>
+		</div>
+		
+		<script>
+			$('#music a.list-group-item').click(
+				function(e) {
+					$('#music div.list-group-details').hide();
+					$(this).find('.list-group-details').show();
+				});
+		</script>
+		
+		<div id="games" class="col-md-12 sect" style="display:none;">
+			<div class="row"><div class="col-md-12">
+				<ul class="list-group">
+					<a href="javascript:" class="list-group-item">
+						Tic Tac Toe
+						<div class="list-group-details" style="display:none;">
+							<div class="row"><div class="col-md-12">
+								<iframe src="tictactoe.html" height="340" width="500" frameBorder="0"></iframe>
+							</div></div>
+						</div>
+					</a>
+					<a href="javascript:" class="list-group-item">
+						Sliding Puzzle
+						<div class="list-group-details" style="display:none;">
+							<div class="row"><div class="col-md-12">
+								<iframe src="sliding.html" height="450" width="650" frameBorder="0"></iframe>
+							</div></div>
+						</div>
+					</a>
+				</ul>
+			</div></div>
+		</div>
+		
+		<script>
+			$('#games a.list-group-item').click(
+				function(e) {
+					$('#games div.list-group-details').hide();
+					$(this).find('.list-group-details').show();
+				});
+		</script>
+
+		<div id="news" class="col-md-12 sect" style="display:none;">
+			<div class="row"><div class="col-md-12">
+				<iframe src="http://feeds.bbci.co.uk/news/world/rss.xml" height="350" width="600" frameBorder="0"></iframe>
+			</div></div>
+		</div>
+		
+		<div id="books" class="col-md-12 sect" style="display:none;">
+			<div class="row"><div class="col-md-12">
+				<ul class="list-group">
+					<a href="javascript:" class="list-group-item"><i class="fa fa-book"></i>
+						The Maze Runner
+						<div class="list-group-details" style="display:none;">
+							<hr/>
+							<div class="row"><div class="col-md-12">
+								<embed src="assets/books/themazerunner.pdf" width="600" height="400" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+							</div></div>
+						</div>
+					</a>
+					<a href="javascript:" class="list-group-item"><i class="fa fa-book"></i>
+						The Fault In Our Stars
+						<div class="list-group-details" style="display:none;">
+							<hr/>
+							<div class="row"><div class="col-md-12">
+								<embed src="assets/books/thefaultinourstars.pdf" width="600" height="400" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+							</div></div>
+						</div>
+					</a>
+				</ul>
+			</div></div>
+		</div>
+		
+		<script>
+			$('#books a.list-group-item').click(
+				function(e) {
+					$('#books div.list-group-details').hide();
+					$(this).find('.list-group-details').show();
+				});
+		</script>
+		
+		<div id="menu" class="col-md-12 sect">
+			<div class="row">
+				<div class= "col-md-12 options">
+					<div class= "col-md-4 each-option">
+						<a href="javascript:" onclick="switchSect('track');">
+							<i class="fa fa-plane fa-2x">Track Your Journey</i>
+						</a>
+					</div>
+					<div class= "col-md-4 each-option">
+						<a href="javascript:" onclick="switchSect('movies');">
+							<i class="fa fa-film fa-2x">Movies</i>
+						</a>
+					</div>
+					<div class= "col-md-4 each-option">
+						<a href="javascript:" onclick="switchSect('music');">
+							<i class="fa fa-music fa-2x">Music</i>
+						</a>
+					</div>
+					<div class= "col-md-4 each-option">
+						<a href="javascript:" onclick="switchSect('games');">
+							<i class="fa fa-gamepad fa-2x">Games</i>
+						</a>
+					</div>
+					<div class= "col-md-4 each-option">
+						<a href="javascript:" onclick="switchSect('news');">
+							<i class="fa fa-desktop fa-2x">News</i>
+						</a>
+					</div>
+					<div class= "col-md-4 each-option">
+						<a href="javascript:" onclick="switchSect('books');">
+							<i class="fa fa-book fa-2x">Books</i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			function switchSect(name){
+				$('.sect').hide();
+				$('#'+name).show();
+			}
+		</script>
+		
 	</div>
 </body>
 
