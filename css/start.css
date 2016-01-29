@@ -1,0 +1,17 @@
+.navbar-header{
+	padding-top: 10px;
+}
+a{
+	color:#333;
+}
+.options{
+	text-align: center;
+	margin-top: 20px;
+}
+.each-option{
+	vertical-align: middle;
+	margin: 40px 0 40px 0;
+}
+i::before{
+	margin-right: 10px;
+}
