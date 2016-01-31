@@ -24,22 +24,75 @@
 			</div>
 		</div>
 		
+		<div id="journey" class="col-md-12 sect" style="display:none;">
+			<div class="each-option" style="margin:10px 40px;"><i class="fa fa-plane fa-2x">Track Your Journey</i></div>
+			<div class="row"><div class="col-md-12">
+			<div class="row"><div class="col-md-8 col-md-offset-2">
+				<input id="timeslider" type="range" name="points" value="1" min="1" max="10">
+				<p id="details" style="color: white; text-align: right; position:relative; top:3em; right:20px; z-index:20;">
+					00:25<br/>
+					Wind Speed: 50km/h<br/>
+					ETA: 200 min<br/>
+					Humidity: 0.35<br/>
+					Air Pollution Index: 22PSI
+				</p>
+				<img id="journey_img" class="img-responsive" src="assets/journey/1.png" style="position:relative; top:-6em;    border: solid white; border-radius: 10px;"></img>
+			</div></div>
+			</div></div>
+		</div>
+		
+		<script>
+			$(document).ready(function(){
+				$("#timeslider").on('input change', function() {
+					var val = $("#timeslider").val();
+					$("#journey_img").attr("src", "assets/journey/" + val.toString() + ".png");
+					var newText = "0" + Math.floor(val/3).toString() + ":" + ((val*2)%6).toString() + "5<br/>";
+					newText += "Wind Speed: " + (48 + parseInt(val)).toString() + "km/h<br/>";
+					newText += "ETA: " + (220-20*val).toString() + " min<br/>";
+					newText += "Humidity: 0." + (36-(val%3)).toString() + "<br/>";
+					newText += "Air Pollution Index: " + (19 + val*3).toString() + "PSI";
+					$("#details").html(newText);
+				});
+			});
+		</script>
+		
 		<div id="movies" class="col-md-12 sect" style="display:none;">
+			<div class="each-option" style="margin:10px 40px;"><i class="fa fa-film fa-2x">Movies</i></div>
 			<div class="row"><div class="col-md-12">
 				<ul class="list-group">
 					<a href="javascript:" class="list-group-item">
-						Tic Tac Toe
+						Daddy's Home
 						<div class="list-group-details" style="display:none;">
+							<hr/>
 							<div class="row"><div class="col-md-12">
-								<iframe src="tictactoe.html" height="340" width="500" frameBorder="0"></iframe>
+								<video width="500" controls>
+									<source src="assets/videos/daddyshome.mov">
+									Video fails to load.
+								</video>
 							</div></div>
 						</div>
 					</a>
 					<a href="javascript:" class="list-group-item">
-						Sliding Puzzle
+						Ip Man
 						<div class="list-group-details" style="display:none;">
+							<hr/>
 							<div class="row"><div class="col-md-12">
-								<iframe src="sliding.html" height="450" width="650" frameBorder="0"></iframe>
+								<video width="600" controls>
+									<source src="assets/videos/ipman.mov">
+									Video fails to load.
+								</video>
+							</div></div>
+						</div>
+					</a>
+					<a href="javascript:" class="list-group-item">
+						Star Wars: The Force Awakens
+						<div class="list-group-details" style="display:none;">
+							<hr/>
+							<div class="row"><div class="col-md-12">
+								<video width="600" controls>
+									<source src="assets/videos/starwars.mov">
+									Video fails to load.
+								</video>
 							</div></div>
 						</div>
 					</a>
@@ -47,7 +100,16 @@
 			</div></div>
 		</div>
 		
+		<script>
+			$('#movies a.list-group-item').click(
+				function(e) {
+					$('#movies div.list-group-details').hide();
+					$(this).find('.list-group-details').show();
+				});
+		</script>
+		
 		<div id="music" class="col-md-12 sect" style="display:none;">
+			<div class="each-option" style="margin:10px 40px;"><i class="fa fa-music fa-2x">Music</i></div>
 			<div class="row"><div class="col-md-12">
 				<ul class="list-group">
 					<a href="javascript:" class="list-group-item">
@@ -132,11 +194,13 @@
 		</script>
 		
 		<div id="games" class="col-md-12 sect" style="display:none;">
+			<div class="each-option" style="margin:10px 40px;"><i class="fa fa-gamepad fa-2x">Games</i></div>
 			<div class="row"><div class="col-md-12">
 				<ul class="list-group">
 					<a href="javascript:" class="list-group-item">
 						Tic Tac Toe
 						<div class="list-group-details" style="display:none;">
+							<hr/>
 							<div class="row"><div class="col-md-12">
 								<iframe src="tictactoe.html" height="340" width="500" frameBorder="0"></iframe>
 							</div></div>
@@ -145,6 +209,7 @@
 					<a href="javascript:" class="list-group-item">
 						Sliding Puzzle
 						<div class="list-group-details" style="display:none;">
+							<hr/>
 							<div class="row"><div class="col-md-12">
 								<iframe src="sliding.html" height="450" width="650" frameBorder="0"></iframe>
 							</div></div>
@@ -162,13 +227,13 @@
 				});
 		</script>
 
-		<div id="news" class="col-md-12 sect" style="display:none;">
-			<div class="row"><div class="col-md-12">
-				<iframe src="http://feeds.bbci.co.uk/news/world/rss.xml" height="350" width="600" frameBorder="0"></iframe>
-			</div></div>
+		<div id="shop" class="col-md-12 sect" style="display:none;">
+			<div class="each-option" style="margin:10px 40px;"><i class="fa fa-shopping-cart fa-2x">Shop</i></div>
+			<iframe src="shop1.html" width="100%" height="500px" frameBorder="0" allowtransparency="true"></iframe>
 		</div>
 		
 		<div id="books" class="col-md-12 sect" style="display:none;">
+			<div class="each-option" style="margin:10px 40px;"><i class="fa fa-book fa-2x">Books</i></div>
 			<div class="row"><div class="col-md-12">
 				<ul class="list-group">
 					<a href="javascript:" class="list-group-item"><i class="fa fa-book"></i>
@@ -205,7 +270,7 @@
 			<div class="row">
 				<div class= "col-md-12 options">
 					<div class= "col-md-4 each-option">
-						<a href="javascript:" onclick="switchSect('track');">
+						<a href="javascript:" onclick="switchSect('journey');">
 							<i class="fa fa-plane fa-2x">Track Your Journey</i>
 						</a>
 					</div>
@@ -225,8 +290,8 @@
 						</a>
 					</div>
 					<div class= "col-md-4 each-option">
-						<a href="javascript:" onclick="switchSect('news');">
-							<i class="fa fa-desktop fa-2x">News</i>
+						<a href="javascript:" onclick="switchSect('shop');">
+							<i class="fa fa-shopping-cart fa-2x">Shop</i>
 						</a>
 					</div>
 					<div class= "col-md-4 each-option">
